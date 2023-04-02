@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Default styles */
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+      /* display: flex; */
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: radial-gradient(#78d5ff, #0081e8);
+      
+    }
+    /* .kaka{
+      position: relative;
+      width: 180px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform-style: preserve-3d;
+      transform: perspective(500px) rotate(45deg);
+
+
+    }
+    .kaka span{
+      position: absolute;
+      display: block;
+      border: 15px solid #fff;
+      box-sizing: border-box;
+      border-radius: 50%;
+      box-shadow: 0 10px 0 #e0e0e0, inset 0 10px 0 #e0e0e0;
+      animation: animate 4.5s ease-in-out infinite;
+    }
+    .kaka span:nth-child(1){
+      animation-delay: 3s;
+
+    }
+    .kaka span:nth-child(2){
+      animation-delay: 3.5s;
+
+    }
+    .kaka span:nth-child(3){
+      animation-delay: 10.0s;
+
+    }
+    @keyframes animate{
+      0%{
+        transform: translateZ(-100px);
+        width: 100%;
+        height: 100%;
+
+      }
+      25% {
+        transform: translateZ(100px);
+        width: 100%;
+        height: 100%;
+
+      }
+      50% {
+        transform: translateZ(100px);
+        width: 35%;
+        height: 35%;
+
+      }
+      75% {
+        transform: translateZ(-100px);
+        width: 35%;
+        height: 35%;
+
+      }
+      100% {
+        transform: translateZ(-100px);
+        width: 100%;
+        height: 100%;
+
+      } */
+    /* } */
+    .button {
+      background-color: blue;
+      width: 100px;
+      height: 50px;
+      font-weight: 900;
+      color: white;
+      
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    nav {
+      background-color: #f2f2f2;
+      overflow: hidden;
+    }
+    
+    nav a {
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+      font-size: 20px;
+      float: left;
+    }
+    
+    main {
+      padding: 20px;
+    }
+    
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    /* Media query for smaller screens */
+    @media only screen and (max-width: 600px) {
+      nav a {
+        float: none;
+        display: inline-block;
+      }
+    }
+    h4,h3,h5{
+      font-size: 200%;
+    }
+    body {
+			background-color: #0f4c81;
+			background-image: radial-gradient(circle at 50% 40%, #a6c0fe, #f68084);
+			overflow: hidden;
+		}
+		#wave-container {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			overflow: hidden;
+		}
+		.wave {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255, 255, 255, 0.1);
+			transform-origin: bottom center;
+			animation: wave 8s linear infinite;
+		}
+		@keyframes wave {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+    /* .sentence {
+			animation: typing 4s steps(20, end) infinite;
+			overflow: hidden;
+			white-space: nowrap;
+			border-right: 2px solid #fff;
+			padding-right: 10px;
+			margin-right: 10px;
+			display: inline-block;
+		}
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+			to {
+				width: 100%;
+			}
+		} */
+    .word {
+			animation: colorchange 2s infinite;
+		}
+		@keyframes colorchange {
+			0% { color: red; }
+			50% { color: blue; }
+			100% { color: green; }
+		}
+  </style>
+</head>
+<body >
+ 
+  
+
+  
+  
+    <header>
+      <h1>My Responsive Website</h1>
+    </header>
+    
+
+    
+    <nav>
+      <a href="posApp/">Home</a>
+      <a href="posApp/">About</a>
+      <a href="#">Services</a>
+      
+     
+    </nav>
+   
+    
+    <main>
+      
+
+<div class="word"><h1>WELCOME TO SIKEpay</h1><br></div>
+<br>
+<br>
+<div>
+  <button class="button"><a href="posApp/">SIKEpay Point of sale</a></button><br><br><br>
+  
+  <button class="button"><a href="onlinestore/">online stores</a></button>
+
+  </div>
+<!-- <div class="smoke"></div> -->
+<div id="wave-container">
+ 
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+
+      
+     
+      <!-- <div class="kaka">
+        
+        <span><h3>welcome</h3></span>
+        <span><h4>to</h4></span>
+        <span><h5>SIKEpay</h5></span>
+        </div> -->
+        
+ 
+ 
+   
+    </main><br>
+    
+    <footer>
+      <p>&copy; 2023  Company</p>
+    </footer>
+  
+
+</body>
+</html>
