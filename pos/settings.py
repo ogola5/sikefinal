@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'accounts',
     'core',
     'transactions',
+    'mirai',
     'django_celery_beat',
     # 'dashboard',
     'rest_framework',
