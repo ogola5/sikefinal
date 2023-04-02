@@ -19,6 +19,8 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
+from core.views import HomeView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls,name="admin-site"),
@@ -28,7 +30,14 @@ urlpatterns = [
    
     path('onlinestore/', include('onlinestore.urls')),
     # path('posApp/', include('posApp.urls')),
-    
-    
+    path('MM/', HomeView.as_view(), name='home'),
+    path('accounts/', include('accounts.urls', namespace='accounts')),
+    # path('admin/', admin.site.urls),
+    path(
+        '',
+        include('transactions.urls', namespace='transactions'))
 ]
+    
+    
+
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

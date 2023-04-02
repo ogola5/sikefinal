@@ -42,7 +42,7 @@
         <!-- Aside -->
         <div class="main-wrapper mdc-drawer-app-content">
             <!-- Top Navigation -->
-            {% block TopNavigation %} {% include "posApp/TopNavigation.html" %} {% endblock TopNavigation %}
+            {% block TopNavigation %} {% include "posApp/topNavigation.html" %} {% endblock TopNavigation %}
             <!-- Top Navigation -->
 
             <div class="page-wrapper mdc-toolbar-fixed-adjust">
@@ -92,7 +92,7 @@
         </div>
     </div>
     {% block ScriptBlock %} {% endblock ScriptBlock %}
-    <div class="modal fade" id="uni_modal" role='dialog'>
+    <div class="modal fade" id="uni_modal" role="dialog">
         <div class="modal-dialog modal-md modal-dialog-centered" role="document">
             <div class="modal-content rounded-0">
                 <div class="modal-header">
@@ -101,13 +101,13 @@
                 <div class="modal-body">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn  btn-sm btn-flat btn-primary rounded-0" id='submit' onclick="$('#uni_modal form').submit()">Save</button>
+                    <button type="button" class="btn  btn-sm btn-flat btn-primary rounded-0" id="submit" onclick="$('#uni_modal form').submit()">Save</button>
                     <button type="button" class="btn btn-sm btn-flat btn-secondary rounded-0" data-bs-dismiss="modal">Cancel</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="confirm_modal" role='dialog'>
+    <div class="modal fade" id="confirm_modal" role="dialog">
         <div class="modal-dialog modal-md modal-dialog-centered" role="document">
             <div class="modal-content rounded-0">
                 <div class="modal-header">
@@ -117,7 +117,7 @@
                     <div id="delete_content"></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-sm btn-flat btn-primary rounded-0" id='confirm' onclick="">Continue</button>
+                    <button type="button" class="btn btn-sm btn-flat btn-primary rounded-0" id="confirm" onclick="">Continue</button>
                     <button type="button" class="btn btn-sm btn-flat btn-secondary rounded-0" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
