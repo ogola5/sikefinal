@@ -21,7 +21,7 @@ urlpatterns = [
     ),
     path('user/', views.User_list),
     path('user/<int:id>', views.User_detail),
-    path('bankAccountType/', views.BankAccountType_list),
+    path('', views.BankAccountType_list),
     path('bankAccountType/<int:id>', views.BankAccountType_detail),
     path('userBankAccout/', views.UserBankAccount_list),
     path('userBankAccount/<int:id>', views.UserBankAccount_detail),

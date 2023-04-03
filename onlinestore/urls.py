@@ -16,10 +16,10 @@ urlpatterns = [
     path('Products/<int:id>', views.Product_detail),
     path('Orders/', views.Order_list),
     path('Orders/<int:id>', views.Order_detail),
-    path('Order items/', views.OrderItem_list),
-    path('Order items/<int:id>', views.OrderItem_detail),
-    path('Shipping addresss/', views.ShippingAddress_list),
-    path('Shipping addresss/<int:id>', views.ShippingAddress_detail),
+    path('Order-items/', views.OrderItem_list),
+    path('Order-items/<int:id>', views.OrderItem_detail),
+    path('Shipping-addresss/', views.ShippingAddress_list),
+    path('Shipping-addresss/<int:id>', views.ShippingAddress_detail),
 
 ]
 urlpatterns = format_suffix_patterns(urlpatterns)

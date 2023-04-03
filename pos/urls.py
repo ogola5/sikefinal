@@ -30,11 +30,11 @@ urlpatterns = [
    
     path('onlinestore/', include('onlinestore.urls')),
     # path('posApp/', include('posApp.urls')),
-    path('MM/', HomeView.as_view(), name='home'),
-    path('accounts/', include('accounts.urls', namespace='accounts')),
+    path('home/', HomeView.as_view(), name='home'),
+    path('accounts/', include('accounts.urls')),
     # path('admin/', admin.site.urls),
     path(
-        '',
+        'transaction/',
         include('transactions.urls', namespace='transactions'))
 ]
     
