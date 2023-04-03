@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'mirai',
     'django_celery_beat',
     # 'dashboard',
+    'bootstrap4',
     'rest_framework',
     'corsheaders',
     'rest_framework.authtoken',

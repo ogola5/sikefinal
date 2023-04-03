@@ -89,6 +89,10 @@ def about(request):
     }
     return render(request, 'posApp/about.html',context)
 
+def kiki(request):
+    context = {}
+    return render(request, 'posApp/lenah.html',context)
+
 #Categories
 @login_required
 def category(request):

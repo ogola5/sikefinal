@@ -10,6 +10,7 @@ urlpatterns = [
     # path('', views.dashboard, name="dashboard"),
     # path('homepage', views.home, name="home-page"),
     # path('', auth_views.LoginView.as_view(template_name = 'posApp/login.html',redirect_authenticated_user=True), name="login"),
+    # path('', views.kiki, name="kiki"),
     path('', views.home, name="home-page"),
     path('userlogin', views.login_user, name="login-user"),
     path('logout', views.logoutuser, name="logout"),

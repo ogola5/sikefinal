@@ -26,15 +26,15 @@ urlpatterns = [
     path('admin/', admin.site.urls,name="admin-site"),
     # path('posApp/', include('posApp.urls')),
     path('', include('dashboard.urls')),
-    path('posApp/', include('posApp.urls')),
+    path('poo/', include('posApp.urls')),
    
     path('onlinestore/', include('onlinestore.urls')),
     # path('posApp/', include('posApp.urls')),
-    path('MM/', HomeView.as_view(), name='home'),
+    path('home/', HomeView.as_view(), name='home'),
     path('accounts/', include('accounts.urls', namespace='accounts')),
     # path('admin/', admin.site.urls),
     path(
-        '',
+        'transaction/',
         include('transactions.urls', namespace='transactions'))
 ]
     
