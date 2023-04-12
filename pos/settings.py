@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'rest_framework.authtoken',
-   # 'accounts.apps.AccountsConfig',
+    #'accounts.apps.AccountsConfig',
 ]
 AUTH_USER_MODEL = 'app1.CustomUser'
 
