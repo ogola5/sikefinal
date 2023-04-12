@@ -4,11 +4,13 @@ from .views import UserRegistrationView, LogoutView, UserLoginView
 from . import views
 
 
+
+
 app_name = 'accounts'
 
 urlpatterns = [
     path(
-        "login/", UserLoginView.as_view(),
+        "", UserLoginView.as_view(),
         name="user_login"
     ),
     path(
@@ -19,13 +21,14 @@ urlpatterns = [
         "register/", UserRegistrationView.as_view(),
         name="user_registration"
     ),
-    path('user/', views.User_list),
+    path('user', views.User_list),
     path('user/<int:id>', views.User_detail),
-    path('', views.BankAccountType_list),
+    path('mm/', views.BankAccountType_list),
     path('bankAccountType/<int:id>', views.BankAccountType_detail),
     path('userBankAccout/', views.UserBankAccount_list),
     path('userBankAccount/<int:id>', views.UserBankAccount_detail),
     path('userAddress/', views.UserAddress_list),
     path('userAddress/<int:id>', views.UserAddress_detail)
   
+
 ]

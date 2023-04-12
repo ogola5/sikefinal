@@ -7,26 +7,22 @@ from django.utils import timezone
 from django.views.generic import CreateView, ListView
 
 from transactions.constants import DEPOSIT, WITHDRAWAL
-from django.http import JsonResponse
 from transactions.forms import (
     DepositForm,
     TransactionDateRangeForm,
     WithdrawForm,
 )
 from transactions.models import Transaction
-from rest_framework import generics
-
-from .serializers import TransactionSerializer
+from .serializers import*
 from rest_framework.decorators import api_view
+from django.http import JsonResponse
 from rest_framework.response import Response
+from rest_framework.decorators import api_view
 from rest_framework import status
 
 
 
-
 class TransactionRepostView(LoginRequiredMixin, ListView):
-
-    
     template_name = 'transactions/transaction_report.html'
     model = Transaction
     form_data = {}
@@ -117,7 +113,7 @@ class DepositMoneyView(TransactionCreateMixin):
 
         messages.success(
             self.request,
-            f'{amount}$ was deposited to your account successfully'
+            f'{"{:,.2f}".format(float(amount))}$ was deposited to your account successfully'
         )
 
         return super().form_valid(form)
@@ -139,11 +135,10 @@ class WithdrawMoneyView(TransactionCreateMixin):
 
         messages.success(
             self.request,
-            f'Successfully withdrawn {amount}$ from your account'
+            f'Successfully withdrawn {"{:,.2f}".format(float(amount))}$ from your account'
         )
 
-        return super().form_valid(form)        
-
+        return super().form_valid(form)
 @api_view(['GET', 'POST'])
 def Transaction_list(request, format=None):
 

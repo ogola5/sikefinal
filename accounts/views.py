@@ -4,21 +4,25 @@ from django.contrib.auth.views import LoginView
 from django.shortcuts import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, RedirectView
-from django.http import JsonResponse
-from .models import *
 from .serializers import *
 from rest_framework.decorators import api_view
-from rest_framework.response import Response
+from .forms import UserRegistrationForm, UserAddressForm 
+from django.http import JsonResponse
+from .models import *
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 from .forms import UserRegistrationForm, UserAddressForm
+from rest_framework.response import Response
 
 
-User = get_user_model()
+
+
+
+User1 = get_user_model()
 
 
 class UserRegistrationView(TemplateView):
-    model = User
+    model = User1
     form_class = UserRegistrationForm
     template_name = 'accounts/user_registration.html'
 
@@ -79,12 +83,12 @@ class LogoutView(RedirectView):
         if self.request.user.is_authenticated:
             logout(self.request)
         return super().get_redirect_url(*args, **kwargs)
-    
+
 @api_view(['GET', 'POST'])
 def User_list(request, format=None):
 
     if request.method =='GET':
-     user = User.objects.all()
+     user = User1.objects.all()
      serializer = UserSerializer(user, many=True)
      return Response(serializer.data)
     
@@ -98,8 +102,8 @@ def User_list(request, format=None):
 def User_detail(request, id, format=None):
         try:
            
-           user = User.objects.get(pk=id)
-        except User.DoesNotExist:
+           user = User1.objects.get(pk=id)
+        except User1.DoesNotExist:
            return Response(status=status.HTTP_404_NOT_FOUND)
         
         

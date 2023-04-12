@@ -6,21 +6,15 @@ from django.core.validators import (
     MaxValueValidator,
 )
 from django.db import models
-from django.contrib.auth.models import User
-from django.conf import settings
-from django.db.models.signals import post_save
-from rest_framework.authtoken.models import Token
+
 from .constants import GENDER_CHOICE
 from .managers import UserManager
 
 
-from django.contrib.auth.models import AbstractUser, Group, Permission
-
 class User(AbstractUser):
     username = None
     email = models.EmailField(unique=True, null=False, blank=False)
-    groups = models.ManyToManyField(Group, related_name='user_accounts')
-    user_permissions = models.ManyToManyField(Permission, related_name='user_accounts')
+
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
@@ -34,7 +28,6 @@ class User(AbstractUser):
         if hasattr(self, 'account'):
             return self.account.balance
         return 0
-
 
 
 class BankAccountType(models.Model):

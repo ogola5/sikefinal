@@ -24,14 +24,14 @@ from core.views import HomeView
 
 urlpatterns = [
     path('admin/', admin.site.urls,name="admin-site"),
-    path('', include('app1.urls')),
-    path('dashboard/', include('dashboard.urls')),
+    path('hgdgg/', include('app1.urls')),
+    path('', include('dashboard.urls')),
     path('posApp/', include('posApp.urls')),
     path('store/', include('store.urls')),
    
     # path('onlinestore/', include('onlinestore.urls')),
     # path('posApp/', include('posApp.urls')),
-    path('home/', HomeView.as_view(), name='home'),
+    # path('', HomeView.as_view(), name='home'),
     path('accounts/', include('accounts.urls')),
     # path('admin/', admin.site.urls),
     path(

@@ -35,10 +35,11 @@ class UserAddressForm(forms.ModelForm):
 class UserRegistrationForm(UserCreationForm):
     account_type = forms.ModelChoiceField(
         queryset=BankAccountType.objects.all()
-
     )
     gender = forms.ChoiceField(choices=GENDER_CHOICE)
-    birth_date = forms.DateField()
+    birth_date = forms.DateField(widget=forms.DateInput(attrs={'type':'date'}))
+    first_name = forms.CharField(widget=forms.TextInput(attrs={'autofocus':'on'}))
+    email = forms.CharField(widget=forms.EmailInput(attrs={'autofocus':'off'}))
 
     class Meta:
         model = User
