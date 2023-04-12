@@ -17,7 +17,13 @@
           <th>Company</th>
           <th>Email</th>
           <th>Phone</th>
-          <th>Action</th>
+          <th>monthly_salary</th>
+          <th>tax</th>
+          <th>insurance</th>
+          <th>pension</th>
+          <th>net salary</th>
+
+          <th></th> 
         </tr>
       </thead>
 
@@ -29,6 +35,11 @@
           <td>{{employee.eCompany}}</td>
           <td>{{employee.eEmail}}</td>
           <td>{{employee.ePhone}}</td>
+          <td>{{employee.emonthly_salary}}</td>
+          <td>{{employee.etax}}</td>
+          <td>{{employee.einsurance}}</td>
+          <td>{{employee.epension}}</td>
+          <td>{{employee.payroll}}</td>
           <td>
             
             <button class="btn-danger btn-sm" onclick="location.href='/deleteEmp/{{employee.eFname}}'">Delete</button>

@@ -17,6 +17,12 @@
       {% csrf_token %}
 
       <div class="form-group">
+        <label class="form-label">Employee unique ID:</label>
+        <div>{{form.id}}</div>
+        <!--<<input type="text" value="{{form.eFname}}" />-->
+      </div>
+
+      <div class="form-group">
         <label class="form-label">First Name:</label>
         <div>{{form.eFname}}</div>
         <!--<<input type="text" value="{{form.eFname}}" />-->
@@ -43,6 +49,42 @@
       <div class="form-group">
         <label class="form-label">Employee phone:</label>
         <div>{{form.ePhone}}</div>
+        <!--<input type="text" value="{{form.ePhone}}" />-->
+      </div><br>
+
+      <div class="form-group">
+        <label class="form-label">Employee -monthly salary:</label>
+        <div>{{form.emonthly_salary}}</div>
+        <!--<input type="text" value="{{form.ePhone}}" />-->
+      </div><br>
+
+      <div class="form-group">
+        <label class="form-label">tax:</label>
+        <div>{{form.etax}}</div>
+        <!--<input type="text" value="{{form.ePhone}}" />-->
+      </div><br>
+
+      <div class="form-group">
+        <label class="form-label">Employee insurance:</label>
+        <div>{{form.einsurance}}</div>
+        <!--<input type="text" value="{{form.ePhone}}" />-->
+      </div><br>
+
+      <div class="form-group">
+        <label class="form-label">Employee pension:</label>
+        <div>{{form.epension}}</div>
+        <!--<input type="text" value="{{form.ePhone}}" />-->
+      </div><br>
+
+      <div class="form-group">
+        <label class="form-label">Employee last pay date:</label>
+        <div>{{form.last_pay_date}}</div>
+        <!--<input type="text" value="{{form.ePhone}}" />-->
+      </div><br>
+
+      <div class="form-group">
+        <label class="form-label">Employee last pay amount:</label>
+        <div>{{form.last_pay_amount}}</div>
         <!--<input type="text" value="{{form.ePhone}}" />-->
       </div><br>
 

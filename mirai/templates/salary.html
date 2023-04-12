@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Set Employee Salary</title>
+</head>
+<body>
+	<h1>Set Employee Salary</h1>
+
+	<form method="post">
+		{% csrf_token %}
+		{% for employee in employees %}
+		<div>
+			<label for="{{ employee.eFname }}">{{ employee.eFname }} {{ employee.eLname }}</label>
+			<input type="number" name="{{ employee.id }}-monthly_salary" value="{{ employee.emonthly_salary }}">
+			<input type="number" name="{{ employee.id }}-value_per_hour" value="{{ employee.evalue_per_hour }}">
+			<input type="number" name="{{ employee.id }}-extra_per_hour" value="{{ employee.extra_per_hour }}">
+			<input type="hidden" name="employee_ids" value="{{ employee.id }}">
+		</div>
+		{% endfor %}
+		<button type="submit">Save Changes</button>
+	</form>
+</body>
+</html>

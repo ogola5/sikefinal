@@ -35,7 +35,9 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path(
         '',
-        include('transactions.urls', namespace='transactions'))
+        include('transactions.urls', namespace='transactions')),
+
+    path('mirai/', include('mirai.urls', namespace='mirai')),
 ]
     
     
