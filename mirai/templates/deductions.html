@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Set Employee Deductions</title>
+</head>
+<body>
+	<h1>Set Employee Deductions</h1>
+
+	<form method="post">
+		{% csrf_token %}
+		{% for employee in employees %}
+		<div>
+			<label for="{{ employee.eFname }}">{{ employee.eFname }} {{ employee.eLname }}</label>
+			<input type="number" name="{{ employee.id }}-tax" value="{{ employee.etax }}">
+			<input type="number" name="{{ employee.id }}-insurance" value="{{ employee.einsurance }}">
+			<input type="number" name="{{ employee.id }}-pension" value="{{ employee.epension }}">
+			<input type="hidden" name="employee_ids" value="{{ employee.id }}">
+		</div>
+		{% endfor %}
+		<button type="submit">Save Changes</button>
+	</form>
+</body>
+</html>

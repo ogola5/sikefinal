@@ -35,8 +35,15 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     # path('admin/', admin.site.urls),
     path(
+<<<<<<< HEAD
         'transaction/',
         include('transactions.urls', namespace='transactions'))
+=======
+        '',
+        include('transactions.urls', namespace='transactions')),
+
+    path('mirai/', include('mirai.urls', namespace='mirai')),
+>>>>>>> d92747a4 (updated mirai)
 ]
     
     

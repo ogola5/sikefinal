@@ -14,6 +14,21 @@ class CompanyForm(forms.ModelForm):
         model = Company
         fields = "__all__"
 
+# class SalaryForm(forms.ModelForm):
+#     class Meta:
+#         model = Company
+#         fields = "__all__"
+
+# class DeductionForm(forms.ModelForm):
+#     class Meta:
+#         model = Company
+#         fields = "__all__"
+
+# class PayrollForm(forms.ModelForm):
+#     class Meta:
+#         model = Company
+#         fields = "__all__"
+
 #class loginForm(forms.ModelForm):
     #class Meta:
         #model = Login
