@@ -1,0 +1,105 @@
+.hero-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-text button {
+  background-color: #003c78;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-text button:hover {
+  background-color: #fff;
+  color: #003c78;
+  border: 2px solid #003c78;
+}
+
+.hero-text h1 span {
+  color: #003c78;
+}
+.hero-image img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: slide-in 2s ease forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.hero-text {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #003c78;
+  animation: type-out 2s steps(20, end) forwards,
+             blink-caret .5s step-end infinite;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  color: #003c78;
+  margin-top: 2rem;
+}
+
+@keyframes type-out {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #003c78;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+  .hero-text {
+    text-align: center;
+    position: relative;
+  }
+  .hero-image img {
+    position: relative;
+    animation: none;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+
+  

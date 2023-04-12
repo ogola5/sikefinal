@@ -1,0 +1,81 @@
+.payments-container {
+    margin-top: 100px;
+    padding: 50px;
+    background-color: #f7faff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px; /* add margin to bottom to prevent overlap */
+}
+  
+.payments-container .section-title {
+    text-align: center;
+    font-size: 36px;
+    color: #003049;
+}
+  
+.payments-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+  
+.payments-description {
+    width: 50%;
+    text-align: center;
+    margin-right: 50px;
+    font-size: 20px;
+    color: #003049;
+}
+  
+.payments-description p {
+    margin-bottom: 20px;
+}
+  
+.payments-image-container {
+    width: 50%;
+    position: relative;
+}
+  
+.payments-image-container img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+  
+.payments-image-container img.visible {
+    opacity: 1;
+}
+  
+@media only screen and (max-width: 768px) {
+    .payments-content {
+      flex-direction: column;
+    }
+  
+    .payments-description {
+      width: 100%;
+      margin-right: 0px;
+      margin-bottom: 50px;
+      font-size: 16px;
+    }
+  
+    .payments-image-container {
+      width: 100%;
+    }
+}
+  
+  /* Bluish and whitish theme colors */
+body {
+    background-color: #f7faff;
+    color: #003049;
+}
+  
+  
+  
+  
+  
+  

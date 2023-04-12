@@ -1,0 +1,68 @@
+.business-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .business-container {
+    flex-direction: column-reverse;
+    padding: 3rem;
+    border-radius: 0;
+  }
+
+  .business-text {
+    flex-basis: auto;
+    margin-right: 0;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .business-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .business-description {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+}
+
+.business-text {
+  flex-basis: 50%;
+  margin-right: 5rem;
+}
+
+.business-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.business-description {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.business-image {
+  position: relative;
+  flex-basis: 50%;
+}
+
+.business-image img {
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.business-image img.visible {
+  opacity: 1;
+}
+
+
+  

@@ -1,0 +1,148 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e90ff;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.nav-links li {
+  margin: 0 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+  color: #f0f0f0;
+}
+
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.login-btn,
+.signup-btn {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+  background-color: #f0f0f0;
+  color: #1e90ff;
+}
+
+.navbar-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 1.5rem;
+}
+
+.menu-icon span {
+  display: block;
+  width: 1.5rem;
+  height: 0.2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-icon span:nth-child(1) {
+  transform-origin: top left;
+}
+
+.menu-icon span:nth-child(2) {
+  transform-origin: center;
+}
+
+.menu-icon span:nth-child(3) {
+  transform-origin: bottom left;
+}
+
+.active .menu-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(0.5rem, 0.5rem);
+}
+
+.active .menu-icon span:nth-child(2) {
+  transform: scaleX(0);
+}
+
+.active .menu-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(0.5rem, -0.5rem);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 2rem;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .navbar-right {
+    display: none;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .active .navbar-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
+    display: flex;
+  }
+}
+
+
+
+
