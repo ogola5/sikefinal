@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'celery',
     'mirai',
+    'onlinestore',
     #'accounts.apps.AccountsConfig',
 ]
 
@@ -106,11 +107,11 @@ WSGI_APPLICATION = 'pos.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sikepay',
+        'NAME': 'sikefinal',
         'USER': 'root',
         'PASSWORD': '',
         'HOST':'127.0.0.1',
-        'PORT':'3306',
+        'PORT':'3406',
         'OPTIONS': {
                 'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
             },
